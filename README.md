@@ -14,6 +14,7 @@ A VS Code extension that generates CSS clamp functions for fluid typography. Con
 - ⌨️ Keyboard shortcut support (Ctrl+Shift+C)
 - 🔄 Automatic unit conversion
 - 📝 Optional input value comments
+- ✨ Works with both CSS and SCSS files
 
 ## Usage
 
@@ -33,10 +34,10 @@ A VS Code extension that generates CSS clamp functions for fluid typography. Con
    - Right-click menu: `Smart Clamp`
    - Keyboard shortcut: `Ctrl+Shift+C` (`Cmd+Shift+C` on Mac)
 
-3. Get a responsive clamp function:
+3. Get a responsive clamp function with calc():
 
    ```css
-   clamp(1rem, 0.5vw + 0.75rem, 1.5rem); /* 16px -> 24px (320px -> 1920px) */
+   clamp(1rem, calc(0.5vw + 0.75rem), 1.5rem); /* 16px -> 24px (320px -> 1920px) */
    ```
 
 4. Preview the result:
@@ -62,13 +63,13 @@ Customize the extension through VS Code settings:
 Input: `16px, 24px` or `1rem, 1.5rem` or `16, 24`
 
 ```css
-clamp(1rem, 0.5vw + 0.75rem, 1.5rem); /* 16px -> 24px (320px -> 1920px) */
+clamp(1rem, calc(0.5vw + 0.75rem), 1.5rem); /* 16px -> 24px (320px -> 1920px) */
 ```
 
 Input: `20px, 40px` or `1.25rem, 2.5rem`
 
 ```css
-clamp(1.25rem, 1.25vw + 0.625rem, 2.5rem); /* 20px -> 40px (320px -> 1920px) */
+clamp(1.25rem, calc(1.25vw + 0.625rem), 2.5rem); /* 20px -> 40px (320px -> 1920px) */
 ```
 
 ## Preview Feature
@@ -93,7 +94,7 @@ This helps you visualize how your text will scale across different screen sizes.
 
 ## Known Issues
 
-Please report issues on the [GitHub repository](your-repo-url).
+Please report issues on the [GitHub repository](https://github.com/albynbabu97/smartclamp.git).
 
 ## Release Notes
 
