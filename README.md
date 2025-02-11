@@ -96,17 +96,6 @@ This helps you visualize how your text will scale across different screen sizes.
 
 Please report issues on the [GitHub repository](https://github.com/albynbabu97/smartclamp.git).
 
-## Release Notes
-
-### 0.0.1
-
-- Initial release
-- Basic clamp function generation
-- Multiple unit support (px, rem, em)
-- Live preview feature
-- Configurable viewport settings
-- Keyboard shortcuts and context menu integration
-
 ## Contributing
 
 Contributions are welcome! Please feel free to submit a Pull Request.
@@ -117,4 +106,4 @@ This extension was developed with the assistance of Claude AI to help developers
 
 ## License
 
-This extension is licensed under the [MIT License](LICENSE).
+This extension is licensed under the [MIT License](LICENSE.txt).
