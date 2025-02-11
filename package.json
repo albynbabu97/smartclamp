@@ -18,6 +18,10 @@
       {
         "command": "smartclamp.generateClamp",
         "title": "Smart Clamp"
+      },
+      {
+        "command": "smartclamp.previewClamp",
+        "title": "Preview Smart Clamp"
       }
     ],
     "configuration": {
@@ -70,6 +74,11 @@
       "editor/context": [
         {
           "command": "smartclamp.generateClamp",
+          "when": "editorHasSelection",
+          "group": "1_modification"
+        },
+        {
+          "command": "smartclamp.previewClamp",
           "when": "editorHasSelection",
           "group": "1_modification"
         }
