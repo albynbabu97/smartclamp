@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## 0.1.1
+
+- Added changelog and license
+
 ## 0.1.0
 
 - Wrapped the preferred value calculation in a calc() function
