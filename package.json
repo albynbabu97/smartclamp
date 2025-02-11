@@ -1,0 +1,88 @@
+{
+  "name": "smartclamp",
+  "displayName": "Smart Clamp",
+  "description": "Generates CSS clamp function for responsive typography",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.60.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "activationEvents": [
+    "onCommand:smartclamp.generateClamp"
+  ],
+  "main": "./extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "smartclamp.generateClamp",
+        "title": "Smart Clamp"
+      }
+    ],
+    "configuration": {
+      "title": "Smart Clamp",
+      "properties": {
+        "smartclamp.mobileScreenWidth": {
+          "type": "number",
+          "default": 320,
+          "description": "Mobile screen width in pixels"
+        },
+        "smartclamp.desktopScreenWidth": {
+          "type": "number",
+          "default": 1920,
+          "description": "Desktop screen width in pixels"
+        },
+        "smartclamp.remToPxValue": {
+          "type": "number",
+          "default": 16,
+          "description": "REM to Pixel conversion value (base font size)"
+        },
+        "smartclamp.precision": {
+          "type": "number",
+          "default": 4,
+          "description": "Number of decimal places in the output"
+        },
+        "smartclamp.outputFormat": {
+          "type": "string",
+          "enum": [
+            "rem",
+            "em"
+          ],
+          "default": "rem",
+          "description": "Unit to use in the output"
+        },
+        "smartclamp.includeComment": {
+          "type": "boolean",
+          "default": true,
+          "description": "Include input values as comment"
+        }
+      }
+    },
+    "keybindings": [
+      {
+        "command": "smartclamp.generateClamp",
+        "key": "ctrl+shift+c",
+        "mac": "cmd+shift+c"
+      }
+    ],
+    "menus": {
+      "editor/context": [
+        {
+          "command": "smartclamp.generateClamp",
+          "when": "editorHasSelection",
+          "group": "1_modification"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "lint": "eslint .",
+    "pretest": "npm run lint"
+  },
+  "devDependencies": {
+    "@types/vscode": "^1.60.0",
+    "@types/node": "^14.x.x",
+    "eslint": "^7.x.x"
+  }
+}
