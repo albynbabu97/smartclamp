@@ -93,5 +93,21 @@
     "@types/vscode": "^1.60.0",
     "@types/node": "^14.x.x",
     "eslint": "^7.x.x"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/albynbabu97/smartclamp.git"
+  },
+  "icon": "smartclamp.png",
+  "galleryBanner": {
+    "color": "#C80000",
+    "theme": "dark"
+  },
+  "keywords": [
+    "css",
+    "typography",
+    "responsive",
+    "clamp",
+    "fluid"
+  ]
 }
