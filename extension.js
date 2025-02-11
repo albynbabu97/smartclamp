@@ -70,9 +70,9 @@ function activate(context) {
 
         // Calculate the preferred value using the slope formula
         const slopeVw = (slope * 100).toFixed(6); // Convert to vw units
-        const preferredValue = `${Number(slopeVw)}vw + ${Number(
+        const preferredValue = `calc(${Number(slopeVw)}vw + ${Number(
           (yIntercept / remToPx).toFixed(6)
-        )}rem`;
+        )}rem)`;
 
         // Generate the clamp function with brief comment
         const clampFunction = `clamp(${Number(
