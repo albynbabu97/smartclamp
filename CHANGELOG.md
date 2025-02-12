@@ -6,6 +6,10 @@ Check [Keep a Changelog](http://keepachangelog.com/) for recommendations on how 
 
 ## [Unreleased]
 
+## 0.1.2
+
+- Fix comment formatting in clamp function generation
+
 ## 0.1.1
 
 - Added changelog and license
