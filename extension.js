@@ -50,6 +50,7 @@ function activate(context) {
         const mobileWidth = config.get("mobileScreenWidth");
         const desktopWidth = config.get("desktopScreenWidth");
         const remToPx = config.get("remToPxValue");
+        const includeComment = config.get("includeComment");
 
         // Clean and parse input values with remToPx value
         const [mobileFontSize, desktopFontSize] = text
@@ -74,12 +75,15 @@ function activate(context) {
           (yIntercept / remToPx).toFixed(6)
         )}rem)`;
 
-        // Generate the clamp function with brief comment
+        // Generate the clamp function with optional comment
+        const comment = includeComment
+          ? ` /* ${mobileFontSize}px -> ${desktopFontSize}px (${mobileWidth}px -> ${desktopWidth}px) */`
+          : "";
         const clampFunction = `clamp(${Number(
           mobileRem.toFixed(4)
         )}rem, ${preferredValue}, ${Number(
           desktopRem.toFixed(4)
-        )}rem); /* ${mobileFontSize}px -> ${desktopFontSize}px (${mobileWidth}px -> ${desktopWidth}px) */`;
+        )}rem);${comment}`;
 
         editor.edit((editBuilder) => {
           editBuilder.replace(selection, clampFunction);
