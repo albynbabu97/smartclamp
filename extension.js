@@ -79,7 +79,7 @@ function activate(context) {
           mobileRem.toFixed(4)
         )}rem, ${preferredValue}, ${Number(
           desktopRem.toFixed(4)
-        )}rem); /* ${mobileFontSize}px -> ${desktopFontSize}px (${mobileWidth}px -> ${desktopWidth}px */`;
+        )}rem); /* ${mobileFontSize}px -> ${desktopFontSize}px (${mobileWidth}px -> ${desktopWidth}px) */`;
 
         editor.edit((editBuilder) => {
           editBuilder.replace(selection, clampFunction);
