@@ -2,7 +2,7 @@
   "name": "smartclamp",
   "displayName": "Smart Clamp",
   "description": "Generates CSS clamp function for responsive typography",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "engines": {
     "vscode": "^1.60.0"
   },
