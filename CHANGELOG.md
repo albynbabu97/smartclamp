@@ -2,6 +2,10 @@
 
 All notable changes to the "smartclamp" extension will be documented in this file.
 
+## 1.0.0
+
+- Initial stable release
+
 ## 0.1.4
 
 - Logo update

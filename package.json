@@ -44,7 +44,7 @@
         },
         "smartclamp.precision": {
           "type": "number",
-          "default": 4,
+          "default": 2,
           "description": "Number of decimal places in the output"
         },
         "smartclamp.outputFormat": {
