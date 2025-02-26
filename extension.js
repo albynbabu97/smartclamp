@@ -51,6 +51,7 @@ function activate(context) {
         const desktopWidth = config.get("desktopScreenWidth");
         const remToPx = config.get("remToPxValue");
         const includeComment = config.get("includeComment");
+        const precision = config.get("precision");
 
         // Clean and parse input values with remToPx value
         const [mobileFontSize, desktopFontSize] = text
@@ -70,19 +71,19 @@ function activate(context) {
         const desktopRem = desktopFontSize / remToPx;
 
         // Calculate the preferred value using the slope formula
-        const slopeVw = (slope * 100).toFixed(6); // Convert to vw units
-        const preferredValue = `calc(${Number(slopeVw)}vw + ${Number(
-          (yIntercept / remToPx).toFixed(6)
-        )}rem)`;
+        const slopeVw = (slope * 100).toFixed(precision); // Convert to vw units
+        const preferredValue = `calc(${Number(slopeVw).toFixed(
+          precision
+        )}vw + ${Number((yIntercept / remToPx).toFixed(precision))}rem)`;
 
         // Generate the clamp function with optional comment
         const comment = includeComment
           ? ` /* ${mobileFontSize}px -> ${desktopFontSize}px (${mobileWidth}px -> ${desktopWidth}px) */`
           : "";
         const clampFunction = `clamp(${Number(
-          mobileRem.toFixed(4)
+          mobileRem.toFixed(precision)
         )}rem, ${preferredValue}, ${Number(
-          desktopRem.toFixed(4)
+          desktopRem.toFixed(precision)
         )}rem);${comment}`;
 
         editor.edit((editBuilder) => {
