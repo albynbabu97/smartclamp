@@ -30,22 +30,26 @@
         "smartclamp.mobileScreenWidth": {
           "type": "number",
           "default": 320,
-          "description": "Mobile screen width in pixels"
+          "description": "Mobile screen width in pixels",
+          "scope": "resource"
         },
         "smartclamp.desktopScreenWidth": {
           "type": "number",
           "default": 1920,
-          "description": "Desktop screen width in pixels"
+          "description": "Desktop screen width in pixels",
+          "scope": "resource"
         },
         "smartclamp.remToPxValue": {
           "type": "number",
           "default": 16,
-          "description": "REM to Pixel conversion value (base font size)"
+          "description": "REM to Pixel conversion value (base font size)",
+          "scope": "resource"
         },
         "smartclamp.precision": {
           "type": "number",
           "default": 2,
-          "description": "Number of decimal places in the output"
+          "description": "Number of decimal places in the output",
+          "scope": "resource"
         },
         "smartclamp.outputFormat": {
           "type": "string",
@@ -54,12 +58,14 @@
             "em"
           ],
           "default": "rem",
-          "description": "Unit to use in the output"
+          "description": "Unit to use in the output",
+          "scope": "resource"
         },
         "smartclamp.includeComment": {
           "type": "boolean",
           "default": true,
-          "description": "Include input values as comment"
+          "description": "Include input values as comment",
+          "scope": "resource"
         }
       }
     },

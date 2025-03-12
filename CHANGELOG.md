@@ -2,6 +2,10 @@
 
 All notable changes to the "smartclamp" extension will be documented in this file.
 
+## 1.0.3
+
+- Added resource scope to settings to manage extension configuration per project
+
 ## 1.0.2
 
 - Added precision option to round off the output value
